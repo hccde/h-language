@@ -1,0 +1,25 @@
+{
+  "name": "h-language",
+  "version": "0.0.1",
+  "description": "h language",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hccde/h-language.git"
+  },
+  "keywords": [
+    "pl"
+  ],
+  "author": "admos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hccde/h-language/issues"
+  },
+  "homepage": "https://github.com/hccde/h-language#readme",
+  "dependencies": {
+    "pegjs": "^0.10.0"
+  }
+}
