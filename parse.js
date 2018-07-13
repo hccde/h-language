@@ -5,10 +5,12 @@
 
 
 Function "Function"
-  = _ "function" [ \t\n\r]+ IDentifier _"(" _ ")" _ "{" _ Statement* _ "}" {return '1'}
+  = _ "function" [ \t\n\r]+ IDentifier _"(" _ ")" _
+    "{" _ (Statement/Function)* _ "}" {return '1'}
 
 Statement "Statement"
-  = _ IDentifier _ "=" _(IDentifier / Expression )_";"  {return '1'}
+  = _ IDentifier _ "=" _(IDentifier / Expression)_";"  {return '1'}
+    / _ "return" _ Expression _ ";"
 
 Expression
   = head:Term tail:(_ ("+" / "-") _ Term)* {
